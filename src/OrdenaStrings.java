@@ -26,15 +26,13 @@ public class OrdenaStrings {
 		
 		/* Não é possível instanciar uma interface exceto que na sua inicialização
 		 * você defina a sua implementação, a forma que fazemos isso abaixo chama-se
-		 * classe anônima (sem nome)
+		 * classe anônima (sem nome).
+		 * 
+		 * Nesse caso onde implemetamos uma interface que só tem um método é possível
+		 * utilizarmos o lambda dessa forma e deixar o código mais limpo ainda
 		 */
-		palavras.forEach(new Consumer<String>() {
-
-			@Override
-			public void accept(String string) {
-				System.out.println(string);
-			}
-			
+		palavras.forEach((String string) -> {
+			System.out.println(string);
 		});
 	}
 
