@@ -12,7 +12,8 @@ public class OrdenaStrings {
 		palavras.add("editora casa do codigo");
 		palavras.add("caelum");
 		
-		Collections.sort(palavras);
+		Comparator<String> comparador = new ComparadorPorTamanho();
+		Collections.sort(palavras, comparador);
 		System.out.println(palavras);
 	}
 
@@ -29,4 +30,4 @@ class ComparadorPorTamanho implements Comparator<String> {
 		return 0;
 	}
 	
-)
+}
