@@ -18,4 +18,6 @@ Esse projeto tem o objetivo de colocar em prática tudo que for aprendido no cur
 ### Aula 03 - Method references
 * O que faz um lambda? A grosso modo, é: dado um parâmetro, retorna um valor;
 * String::lenght significa: Dado uma string (não importa o nome da variável) retorna o método lenght() dela;
-* method references não são reflections, são formas mais simples de passar um lambda;
+* method references não são reflections, são formas mais simples de passar um lambda.
+
+### Aula 04 - Streams
