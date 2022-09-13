@@ -10,3 +10,5 @@ Esse projeto tem o objetivo de colocar em prática tudo que for aprendido no cur
 * Uma grande vantagem dos `default methods` é que agora uma interface pode evoluir sem quebrar compatibilidade.
 
 [Documentação List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)
+
+### Aula 02 - Lambdas
