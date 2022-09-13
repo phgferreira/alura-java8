@@ -21,7 +21,7 @@ Esse projeto tem o objetivo de colocar em prática tudo que for aprendido no cur
 * method references não são reflections, são formas mais simples de passar um lambda.
 
 ### Aula 04 - Streams
-* Conhecendo a classe Stream (fluxo de alguma coisa);
+* Conhecendo a interface Stream (fluxo de alguma coisa);
 * Usando filtros em uma Stream;
 * Mapeando os objetos por algum atributo (nome, quantidadeAlunos, etc.);
 * Utilizando o mapToInt para ter acesso a algumas funções mais específicas de um mapeamento usando números inteiros, como pro exempo o `sum`.
