@@ -16,3 +16,5 @@ Esse projeto tem o objetivo de colocar em prática tudo que for aprendido no cur
 * O lambda funciona sempre que em uma interface você tem apenas **um** método abstrato. Essa interface chama-se ``interface funcional``.
 
 ### Aula 03 - Method references
+* O que faz um lambda? A grosso modo, é: dado um parâmetro, retorna um valor;
+* String::lenght significa: Dado uma string (não importa o nome da variável) retorna o método lenght() dela;

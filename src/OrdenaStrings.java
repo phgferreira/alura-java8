@@ -11,8 +11,10 @@ public class OrdenaStrings {
 		palavras.add("editora casa do codigo");
 		palavras.add("caelum");
 		
-		palavras.sort((s1, s2) -> Integer.compare(s1.length(), s2.length()));
-		palavras.sort(Comparator.comparing(string -> string.length()));
+		//palavras.sort((s1, s2) -> Integer.compare(s1.length(), s2.length()));
+		// Comparator.comparing recebe uma Function (ou lambda, método funcional)
+		//palavras.sort(Comparator.comparing(string -> string.length()));
+		palavras.sort(Comparator.comparing(String::length));
 		System.out.println(palavras);
 		
 		palavras.forEach(string -> System.out.println(string));
