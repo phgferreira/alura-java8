@@ -17,7 +17,7 @@ public class OrdenaStrings {
 		palavras.sort(Comparator.comparing(String::length));
 		System.out.println(palavras);
 		
-		palavras.forEach(string -> System.out.println(string));
+		palavras.forEach(System.out::println);
 	}
 
 }
