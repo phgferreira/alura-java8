@@ -24,7 +24,18 @@ public class OrdenaStrings {
 //			System.out.println(palavra);
 //		}
 		
-		Consumer<String> consumidor = new ImprimeNaLinha();
+		/* Não é possível instanciar uma interface exceto que na sua inicialização
+		 * você defina a sua implementação, a forma que fazemos isso abaixo chama-se
+		 * classe anônima (sem nome)
+		 */
+		Consumer<String> consumidor = new Consumer<String>() {
+
+			@Override
+			public void accept(String string) {
+				System.out.println(string);
+			}
+			
+		};
 		palavras.forEach(consumidor);
 	}
 
@@ -43,11 +54,11 @@ class ComparadorPorTamanho implements Comparator<String> {
 	
 }
 
-class ImprimeNaLinha implements Consumer<String> {
-
-	@Override
-	public void accept(String string) {
-		System.out.println(string);
-	}
-	
-}
+//class ImprimeNaLinha implements Consumer<String> {
+//
+//	@Override
+//	public void accept(String string) {
+//		System.out.println(string);
+//	}
+//	
+//}
