@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 public class OrdenaStrings {
@@ -16,16 +15,12 @@ public class OrdenaStrings {
 		/* Não é uma boa prática ficar usando classes utilitárias com métodos estáticos,
 		 * por isso essa forma abaixo é melhor
 		 */
-		palavras.sort(new Comparator<String>() {
-
-			@Override
-			public int compare(String s1, String s2) {
-				if (s1.length() < s2.length())
-					return -1;
-				if (s1.length() > s2.length())
-					return 1;
-				return 0;
-			}
+		palavras.sort( (String s1, String s2) -> {
+			if (s1.length() < s2.length())
+				return -1;
+			if (s1.length() > s2.length())
+				return 1;
+			return 0;
 		});
 		System.out.println(palavras);
 		
