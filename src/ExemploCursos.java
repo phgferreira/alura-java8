@@ -13,11 +13,13 @@ public class ExemploCursos {
 		
 		cursos.sort(Comparator.comparing(Curso::getQuantidadeAlunos));
 		
-		cursos.stream()
+		int soma = cursos.stream()
 			// Esse trecho de código utiliza o design pattern chamado encadeamento
 			.filter(curso -> curso.getQuantidadeAlunos() >= 100)
-			.map(Curso::getQuantidadeAlunos)
-			.forEach(System.out::println);
+			.mapToInt(Curso::getQuantidadeAlunos)
+			.sum();
+		
+		System.out.println(soma);
 		
 	}
 
