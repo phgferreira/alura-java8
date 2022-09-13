@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -13,7 +12,11 @@ public class OrdenaStrings {
 		palavras.add("caelum");
 		
 		Comparator<String> comparador = new ComparadorPorTamanho();
-		Collections.sort(palavras, comparador);
+		//Collections.sort(palavras, comparador);
+		/* Não é uma boa prática ficar usando classes utilitárias com métodos estáticos,
+		 * por isso essa forma abaixo é melhor
+		 */
+		palavras.sort(comparador);
 		System.out.println(palavras);
 	}
 
