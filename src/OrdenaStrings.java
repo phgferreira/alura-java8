@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.function.Consumer;
 
 public class OrdenaStrings {
 
@@ -29,11 +28,12 @@ public class OrdenaStrings {
 		 * classe anônima (sem nome).
 		 * 
 		 * Nesse caso onde implemetamos uma interface que só tem um método é possível
-		 * utilizarmos o lambda dessa forma e deixar o código mais limpo ainda
+		 * utilizarmos o lambda dessa forma e deixar o código mais limpo ainda.
+		 * 
+		 * Tendo um único parâmetro nós podemos tirar as as aspas e tendo apenas
+		 * um único comando podemos tirar as chaves e o ponto de vírgula.
 		 */
-		palavras.forEach((String string) -> {
-			System.out.println(string);
-		});
+		palavras.forEach(string -> System.out.println(string));
 	}
 
 }
