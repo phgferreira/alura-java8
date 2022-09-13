@@ -25,3 +25,5 @@ Esse projeto tem o objetivo de colocar em prática tudo que for aprendido no cur
 * Usando filtros em uma Stream;
 * Mapeando os objetos por algum atributo (nome, quantidadeAlunos, etc.);
 * Utilizando o mapToInt para ter acesso a algumas funções mais específicas de um mapeamento usando números inteiros, como pro exempo o `sum`.
+
+[Documentação Stream](http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)
