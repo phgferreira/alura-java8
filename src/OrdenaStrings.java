@@ -18,6 +18,10 @@ public class OrdenaStrings {
 		 */
 		palavras.sort(comparador);
 		System.out.println(palavras);
+		
+		for (String palavra : palavras) {
+			System.out.println(palavra);
+		}
 	}
 
 }
