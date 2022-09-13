@@ -12,7 +12,7 @@ public class ExemploCursos {
 		cursos.add(new Curso("C", 55));
 		
 		cursos.sort(Comparator.comparing(Curso::getQuantidadeAlunos));
-		cursos.forEach(System.out::println);
+		cursos.forEach(curso -> System.out.println(curso.getNome()));
 	}
 
 }
