@@ -11,12 +11,22 @@ public class OrdenaStrings {
 		palavras.add("editora casa do codigo");
 		palavras.add("caelum");
 		
-		Comparator<String> comparador = new ComparadorPorTamanho();
+		//Comparator<String> comparador = new ComparadorPorTamanho();
 		//Collections.sort(palavras, comparador);
 		/* Não é uma boa prática ficar usando classes utilitárias com métodos estáticos,
 		 * por isso essa forma abaixo é melhor
 		 */
-		palavras.sort(comparador);
+		palavras.sort(new Comparator<String>() {
+
+			@Override
+			public int compare(String s1, String s2) {
+				if (s1.length() < s2.length())
+					return -1;
+				if (s1.length() > s2.length())
+					return 1;
+				return 0;
+			}
+		});
 		System.out.println(palavras);
 		
 //		for (String palavra : palavras) {
@@ -38,18 +48,18 @@ public class OrdenaStrings {
 
 }
 
-class ComparadorPorTamanho implements Comparator<String> {
-
-	@Override
-	public int compare(String s1, String s2) {
-		if (s1.length() < s2.length())
-			return -1;
-		if (s1.length() > s2.length())
-			return 1;
-		return 0;
-	}
-	
-}
+//class ComparadorPorTamanho implements Comparator<String> {
+//
+//	@Override
+//	public int compare(String s1, String s2) {
+//		if (s1.length() < s2.length())
+//			return -1;
+//		if (s1.length() > s2.length())
+//			return 1;
+//		return 0;
+//	}
+//	
+//}
 
 //class ImprimeNaLinha implements Consumer<String> {
 //
