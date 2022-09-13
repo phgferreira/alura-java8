@@ -28,15 +28,14 @@ public class OrdenaStrings {
 		 * você defina a sua implementação, a forma que fazemos isso abaixo chama-se
 		 * classe anônima (sem nome)
 		 */
-		Consumer<String> consumidor = new Consumer<String>() {
+		palavras.forEach(new Consumer<String>() {
 
 			@Override
 			public void accept(String string) {
 				System.out.println(string);
 			}
 			
-		};
-		palavras.forEach(consumidor);
+		});
 	}
 
 }
