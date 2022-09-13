@@ -13,4 +13,6 @@ Esse projeto tem o objetivo de colocar em prática tudo que for aprendido no cur
 
 ### Aula 02 - Lambdas
 * Mostrando o uso do lambda;
-* O lambda funciona sempre que em uma interface você tem apenas **um** método abstrato. Essa interface chama-se ``interface funcional``;
+* O lambda funciona sempre que em uma interface você tem apenas **um** método abstrato. Essa interface chama-se ``interface funcional``.
+
+### Aula 03 - Method references
