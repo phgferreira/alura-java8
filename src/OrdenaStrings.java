@@ -11,7 +11,7 @@ public class OrdenaStrings {
 		palavras.add("editora casa do codigo");
 		palavras.add("caelum");
 		
-		palavras.sort(Comparator.comparing(String::length));
+		palavras.sort(Comparator.comparing( s -> s.charAt(s.length()-1) ));
 		System.out.println(palavras);
 		
 		palavras.forEach(System.out::println);
