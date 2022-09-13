@@ -15,13 +15,7 @@ public class OrdenaStrings {
 		/* Não é uma boa prática ficar usando classes utilitárias com métodos estáticos,
 		 * por isso essa forma abaixo é melhor
 		 */
-		palavras.sort( (String s1, String s2) -> {
-			if (s1.length() < s2.length())
-				return -1;
-			if (s1.length() > s2.length())
-				return 1;
-			return 0;
-		});
+		palavras.sort((s1, s2) -> Integer.compare(s1.length(), s2.length()));
 		System.out.println(palavras);
 		
 //		for (String palavra : palavras) {
