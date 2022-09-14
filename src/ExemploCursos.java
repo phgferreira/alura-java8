@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
 
 public class ExemploCursos {
 
@@ -22,9 +21,10 @@ public class ExemploCursos {
 		
 		System.out.println(soma);
 		
-		Optional<Curso> optionalCurso = cursos.stream()
+		cursos.stream()
 			.filter(curso -> curso.getQuantidadeAlunos() >= 100)
-			.findAny();
+			.findAny()
+			.ifPresent(curso -> System.out.println(curso.getNome()));
 		
 		// Esse método retorna o elemento, se for nulo, retorna NoSuchElementException
 		//optionalCurso.get();
@@ -34,7 +34,7 @@ public class ExemploCursos {
 		//System.out.println(curso.getNome());
 		
 		// Uma outra forma é, se o elemento não for nulo (for presente) então executa a seguinte expressão lambda
-		optionalCurso.ifPresent(curso -> System.out.println(curso.getNome()));
+		//optionalCurso.ifPresent(curso -> System.out.println(curso.getNome()));
 	}
 
 }
