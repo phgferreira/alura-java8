@@ -27,3 +27,6 @@ Esse projeto tem o objetivo de colocar em prática tudo que for aprendido no cur
 * Utilizando o mapToInt para ter acesso a algumas funções mais específicas de um mapeamento usando números inteiros, como pro exempo o `sum`.
 
 [Documentação Stream](http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)
+
+### Aula 05 - Mais Streams, Collectors e APIs
+* Conhecendo a interface Optional. Ela nos ajuda a trabalhar com referências que são nulas (null);
