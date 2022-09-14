@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 public class ExemploCursos {
 
@@ -20,6 +21,10 @@ public class ExemploCursos {
 			.sum();
 		
 		System.out.println(soma);
+		
+		Optional<Curso> curso = cursos.stream()
+			.filter(c -> c.getQuantidadeAlunos() >= 100)
+			.findAny();
 		
 	}
 
