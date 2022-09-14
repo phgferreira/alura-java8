@@ -23,8 +23,9 @@ public class ExemploCursos {
 				.forEach((nome, quantidadeAlunos) -> System.out.println(nome + " ten " + quantidadeAlunos));
 		
 		cursos.stream()
-			.filter(curso -> curso.getQuantidadeAlunos() > 50);
-		
+			.filter(curso -> curso.getQuantidadeAlunos() > 50)
+			.findFirst()
+			.ifPresent(resultado -> System.out.println(resultado.getNome()));;
 	}
 
 }
