@@ -22,8 +22,8 @@ public class ExemploCursos {
 		
 		System.out.println(soma);
 		
-		Optional<Curso> curso = cursos.stream()
-			.filter(c -> c.getQuantidadeAlunos() >= 100)
+		Optional<Curso> optionalCurso = cursos.stream()
+			.filter(curso -> curso.getQuantidadeAlunos() >= 100)
 			.findAny();
 		
 	}
