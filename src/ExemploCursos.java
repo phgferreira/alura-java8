@@ -26,6 +26,11 @@ public class ExemploCursos {
 			.filter(curso -> curso.getQuantidadeAlunos() >= 100)
 			.findAny();
 		
+		// Esse método retorna o elemento, se for nulo, retorna NoSuchElementException
+		//optionalCurso.get();
+		
+		Curso curso = optionalCurso.orElse(null);
+		System.out.println(curso.getNome());
 	}
 
 }
