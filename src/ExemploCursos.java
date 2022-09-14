@@ -29,8 +29,12 @@ public class ExemploCursos {
 		// Esse método retorna o elemento, se for nulo, retorna NoSuchElementException
 		//optionalCurso.get();
 		
-		Curso curso = optionalCurso.orElse(null);
-		System.out.println(curso.getNome());
+		// Esse método diz que se o objeto for nulo, retorna nulo e não dá o NoSuchElementException
+		//Curso curso = optionalCurso.orElse(null);
+		//System.out.println(curso.getNome());
+		
+		// Uma outra forma é, se o elemento não for nulo (for presente) então executa a seguinte expressão lambda
+		optionalCurso.ifPresent(curso -> System.out.println(curso.getNome()));
 	}
 
 }
