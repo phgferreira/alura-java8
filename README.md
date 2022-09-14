@@ -30,3 +30,6 @@ Esse projeto tem o objetivo de colocar em prática tudo que for aprendido no cur
 
 ### Aula 05 - Mais Streams, Collectors e APIs
 * Conhecendo a interface Optional. Ela nos ajuda a trabalhar com referências que são nulas (null);
+* Vantagem do uso de Optional: oferece uma variedade imensa de novos métodos que nos permite trabalhar de forma funcional com nossos valores, tirando maior proveito dos novos recursos de `default methods`, `lambda`s e ´method reference´.
+
+[Documentação Optional](http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html)
