@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class ExemploCursos {
@@ -15,11 +16,13 @@ public class ExemploCursos {
 		cursos.sort(Comparator.comparing(Curso::getQuantidadeAlunos));
 
 		// Usando o collector conseguimos retornar uma lista e inclusive podemos sobreescrever a referência com isso
-		cursos = cursos.stream()
+		Map<Object, Object> map = cursos.stream()
 				.filter(curso -> curso.getQuantidadeAlunos() >= 100)
-				.collect(Collectors.toList());
+				.collect(Collectors.toMap(
+						curso -> curso.getNome(),
+						curso -> curso.getQuantidadeAlunos()));
 			
-			cursos.stream().forEach(curso -> System.out.println(curso.getNome()));
+		System.out.println(map);
 		
 //		OptionalDouble soma = cursos.stream()
 //			// Esse trecho de código utiliza o design pattern chamado encadeamento
