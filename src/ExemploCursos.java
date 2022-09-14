@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 public class ExemploCursos {
@@ -16,32 +15,13 @@ public class ExemploCursos {
 		cursos.sort(Comparator.comparing(Curso::getQuantidadeAlunos));
 
 		// Usando o collector conseguimos retornar uma lista e inclusive podemos sobreescrever a referência com isso
-		Map<Object, Object> map = cursos.stream()
+		cursos.stream()
 				.filter(curso -> curso.getQuantidadeAlunos() >= 100)
 				.collect(Collectors.toMap(
 						curso -> curso.getNome(),
-						curso -> curso.getQuantidadeAlunos()));
+						curso -> curso.getQuantidadeAlunos()))
+				.forEach((nome, quantidadeAlunos) -> System.out.println(nome + " ten " + quantidadeAlunos));
 			
-		System.out.println(map);
-		
-//		OptionalDouble soma = cursos.stream()
-//			// Esse trecho de código utiliza o design pattern chamado encadeamento
-//			.filter(curso -> curso.getQuantidadeAlunos() >= 100)
-//			.mapToInt(Curso::getQuantidadeAlunos)
-//			.average();
-//		
-//		System.out.println(soma);
-		
-
-		// Esse método retorna o elemento, se for nulo, retorna NoSuchElementException
-		//optionalCurso.get();
-		
-		// Esse método diz que se o objeto for nulo, retorna nulo e não dá o NoSuchElementException
-		//Curso curso = optionalCurso.orElse(null);
-		//System.out.println(curso.getNome());
-		
-		// Uma outra forma é, se o elemento não for nulo (for presente) então executa a seguinte expressão lambda
-		//optionalCurso.ifPresent(curso -> System.out.println(curso.getNome()));
 		
 	}
 
