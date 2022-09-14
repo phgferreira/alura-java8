@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.OptionalDouble;
 
 public class ExemploCursos {
 
@@ -13,11 +14,11 @@ public class ExemploCursos {
 		
 		cursos.sort(Comparator.comparing(Curso::getQuantidadeAlunos));
 		
-		int soma = cursos.stream()
+		OptionalDouble soma = cursos.stream()
 			// Esse trecho de código utiliza o design pattern chamado encadeamento
 			.filter(curso -> curso.getQuantidadeAlunos() >= 100)
 			.mapToInt(Curso::getQuantidadeAlunos)
-			.sum();
+			.average();
 		
 		System.out.println(soma);
 		
