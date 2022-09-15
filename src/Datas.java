@@ -15,6 +15,9 @@ public class Datas {
 		
 		Period periodo = Period.between(hoje, proximoAniversario);
 		System.out.println(periodo.getDays());
+		
+		LocalDate quatroAnosDepois = proximoAniversario.plusYears(4);
+		System.out.println(quatroAnosDepois);
 	}
 
 }
