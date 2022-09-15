@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.Month;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
@@ -27,6 +28,9 @@ public class Datas {
 		DateTimeFormatter dateTimeFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 		LocalDateTime agora = LocalDateTime.now();
 		System.out.println(agora.format(dateTimeFormat));
+		
+		LocalTime intervalo = LocalTime.of(15, 30);
+		System.out.println(intervalo);
 	}
 
 }
