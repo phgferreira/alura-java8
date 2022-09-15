@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.Month;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
@@ -20,8 +21,12 @@ public class Datas {
 		LocalDate quatroAnosDepois = proximoAniversario.plusYears(4);
 		System.out.println(quatroAnosDepois);
 		
-		DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		System.out.println(proximoAniversario.format(formato));
+		DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		System.out.println(proximoAniversario.format(dateFormat));
+		
+		DateTimeFormatter dateTimeFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+		LocalDateTime agora = LocalDateTime.now();
+		System.out.println(agora.format(dateTimeFormat));
 	}
 
 }
