@@ -35,4 +35,5 @@ Esse projeto tem o objetivo de colocar em prática tudo que for aprendido no cur
 [Documentação Optional](http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html)
 
 ### Aula 06 - API de datas
-* Conhecendo o LocalDate e Period;
+* Conhecendo o LocalDate, LocalDateTime e Period;
+* Tratando o formato de exibição das datas com DateTimeFormatter;
