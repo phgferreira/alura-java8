@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.time.Month;
+import java.time.Period;
 
 public class Datas {
 
@@ -11,6 +12,9 @@ public class Datas {
 		
 		int anos = proximoAniversario.getYear() - hoje.getYear();
 		System.out.println(anos);
+		
+		Period periodo = Period.between(hoje, proximoAniversario);
+		System.out.println(periodo.getDays());
 	}
 
 }
